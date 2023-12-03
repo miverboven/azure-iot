@@ -29,6 +29,10 @@ async def main():
         
         # Message objects support additional properties
         msg.message_id = uuid.uuid4()
+
+        # Specify the content type and encoding
+        msg.content_type = "application/json"
+        msg.content_encoding = "utf-8"
         
         # You can set custom properties, different from the actual payload
         msg.custom_properties["tornado-warning"] = "yes"
